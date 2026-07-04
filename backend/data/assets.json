@@ -1,0 +1,186 @@
+[
+  {
+    "assetId": "AHU-01",
+    "name": "Air Handling Unit 01",
+    "type": "Air Handling Unit",
+    "location": "Building A - Floor 2",
+    "zone": "Zone 2A",
+    "status": "Running",
+    "manufacturer": "Carrier",
+    "model": "39M",
+    "installDate": "2021-03-15",
+    "lastMaintenance": "2026-05-10",
+    "specifications": {
+      "capacity": "10000 CFM",
+      "motorPower": "15 kW",
+      "refrigerant": "R-410A",
+      "filterType": "MERV-13"
+    },
+    "connectedTo": ["VAV-01", "VAV-02", "VAV-03", "Chiller-01"]
+  },
+  {
+    "assetId": "AHU-02",
+    "name": "Air Handling Unit 02",
+    "type": "Air Handling Unit",
+    "location": "Building A - Floor 3",
+    "zone": "Zone 3A",
+    "status": "Running",
+    "manufacturer": "Trane",
+    "model": "IntelliPak",
+    "installDate": "2021-03-15",
+    "lastMaintenance": "2026-04-22",
+    "specifications": {
+      "capacity": "8000 CFM",
+      "motorPower": "12 kW",
+      "refrigerant": "R-410A",
+      "filterType": "MERV-13"
+    },
+    "connectedTo": ["VAV-04", "VAV-05", "Chiller-01"]
+  },
+  {
+    "assetId": "Chiller-01",
+    "name": "Centrifugal Chiller 01",
+    "type": "Chiller",
+    "location": "Building A - Basement",
+    "zone": "Mechanical Room",
+    "status": "Running",
+    "manufacturer": "York",
+    "model": "YVAA",
+    "installDate": "2020-11-20",
+    "lastMaintenance": "2026-06-01",
+    "specifications": {
+      "capacity": "500 Tons",
+      "motorPower": "350 kW",
+      "refrigerant": "R-134a",
+      "cop": 6.2
+    },
+    "connectedTo": ["AHU-01", "AHU-02", "CoolingTower-01", "Pump-01"]
+  },
+  {
+    "assetId": "Chiller-02",
+    "name": "Centrifugal Chiller 02",
+    "type": "Chiller",
+    "location": "Building B - Basement",
+    "zone": "Mechanical Room",
+    "status": "Standby",
+    "manufacturer": "York",
+    "model": "YVAA",
+    "installDate": "2020-11-20",
+    "lastMaintenance": "2026-05-15",
+    "specifications": {
+      "capacity": "500 Tons",
+      "motorPower": "350 kW",
+      "refrigerant": "R-134a",
+      "cop": 6.0
+    },
+    "connectedTo": ["AHU-03", "CoolingTower-02", "Pump-02"]
+  },
+  {
+    "assetId": "Boiler-01",
+    "name": "Condensing Boiler 01",
+    "type": "Boiler",
+    "location": "Building A - Basement",
+    "zone": "Mechanical Room",
+    "status": "Running",
+    "manufacturer": "Lochinvar",
+    "model": "CREST",
+    "installDate": "2021-01-10",
+    "lastMaintenance": "2026-04-05",
+    "specifications": {
+      "capacity": "2000 MBH",
+      "fuelType": "Natural Gas",
+      "efficiency": "95%"
+    },
+    "connectedTo": ["HeatExchanger-01", "Pump-03"]
+  },
+  {
+    "assetId": "VAV-01",
+    "name": "Variable Air Volume Box 01",
+    "type": "VAV Box",
+    "location": "Building A - Floor 2 - Room 201",
+    "zone": "Zone 2A-1",
+    "status": "Running",
+    "manufacturer": "Trane",
+    "model": "DERA",
+    "installDate": "2021-03-15",
+    "lastMaintenance": "2026-05-10",
+    "specifications": {
+      "maxAirflow": "1200 CFM",
+      "minAirflow": "300 CFM",
+      "hasReheat": true
+    },
+    "connectedTo": ["AHU-01"]
+  },
+  {
+    "assetId": "VAV-02",
+    "name": "Variable Air Volume Box 02",
+    "type": "VAV Box",
+    "location": "Building A - Floor 2 - Room 205",
+    "zone": "Zone 2A-2",
+    "status": "Running",
+    "manufacturer": "Trane",
+    "model": "DERA",
+    "installDate": "2021-03-15",
+    "lastMaintenance": "2026-05-10",
+    "specifications": {
+      "maxAirflow": "1000 CFM",
+      "minAirflow": "250 CFM",
+      "hasReheat": true
+    },
+    "connectedTo": ["AHU-01"]
+  },
+  {
+    "assetId": "VAV-03",
+    "name": "Variable Air Volume Box 03",
+    "type": "VAV Box",
+    "location": "Building A - Floor 2 - Room 210",
+    "zone": "Zone 2A-3",
+    "status": "Fault",
+    "manufacturer": "Trane",
+    "model": "DERA",
+    "installDate": "2021-03-15",
+    "lastMaintenance": "2026-03-20",
+    "specifications": {
+      "maxAirflow": "800 CFM",
+      "minAirflow": "200 CFM",
+      "hasReheat": false
+    },
+    "connectedTo": ["AHU-01"]
+  },
+  {
+    "assetId": "CoolingTower-01",
+    "name": "Cooling Tower 01",
+    "type": "Cooling Tower",
+    "location": "Building A - Rooftop",
+    "zone": "Rooftop",
+    "status": "Running",
+    "manufacturer": "BAC",
+    "model": "3000 Series",
+    "installDate": "2020-11-20",
+    "lastMaintenance": "2026-05-28",
+    "specifications": {
+      "capacity": "600 Tons",
+      "fanPower": "25 kW",
+      "waterFlow": "1500 GPM"
+    },
+    "connectedTo": ["Chiller-01"]
+  },
+  {
+    "assetId": "Pump-01",
+    "name": "Chilled Water Pump 01",
+    "type": "Pump",
+    "location": "Building A - Basement",
+    "zone": "Mechanical Room",
+    "status": "Running",
+    "manufacturer": "Grundfos",
+    "model": "CR Series",
+    "installDate": "2020-11-20",
+    "lastMaintenance": "2026-06-10",
+    "specifications": {
+      "flowRate": "500 GPM",
+      "headPressure": "80 ft",
+      "motorPower": "15 kW"
+    },
+    "connectedTo": ["Chiller-01"]
+  }
+]

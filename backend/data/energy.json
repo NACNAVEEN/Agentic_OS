@@ -1,0 +1,75 @@
+{
+  "buildings": [
+    {
+      "buildingId": "BLD-A",
+      "name": "Building A",
+      "totalArea": 50000,
+      "areaUnit": "sqft",
+      "monthlyConsumption": [
+        {"month": "2026-01", "consumption": 85000, "cost": 10200, "peakDemand": 320},
+        {"month": "2026-02", "consumption": 78000, "cost": 9360, "peakDemand": 290},
+        {"month": "2026-03", "consumption": 72000, "cost": 8640, "peakDemand": 270},
+        {"month": "2026-04", "consumption": 82000, "cost": 9840, "peakDemand": 310},
+        {"month": "2026-05", "consumption": 95000, "cost": 11400, "peakDemand": 380},
+        {"month": "2026-06", "consumption": 110000, "cost": 13200, "peakDemand": 420}
+      ]
+    }
+  ],
+  "assets": {
+    "Chiller-01": {
+      "dailyConsumption": [
+        {"date": "2026-06-25", "consumption": 2800, "unit": "kWh", "runtime": 18.5, "avgLoad": 78},
+        {"date": "2026-06-26", "consumption": 3100, "unit": "kWh", "runtime": 20.0, "avgLoad": 82},
+        {"date": "2026-06-27", "consumption": 2950, "unit": "kWh", "runtime": 19.2, "avgLoad": 80},
+        {"date": "2026-06-28", "consumption": 3200, "unit": "kWh", "runtime": 21.0, "avgLoad": 85},
+        {"date": "2026-06-29", "consumption": 3400, "unit": "kWh", "runtime": 22.5, "avgLoad": 88},
+        {"date": "2026-06-30", "consumption": 3150, "unit": "kWh", "runtime": 20.8, "avgLoad": 83},
+        {"date": "2026-07-01", "consumption": 1250, "unit": "kWh", "runtime": 8.5, "avgLoad": 79}
+      ],
+      "currentPower": 125,
+      "powerUnit": "kW",
+      "efficiency": {"cop": 5.8, "rated_cop": 6.2, "degradation": "6.5%"}
+    },
+    "AHU-01": {
+      "dailyConsumption": [
+        {"date": "2026-06-25", "consumption": 280, "unit": "kWh", "runtime": 24.0, "avgLoad": 72},
+        {"date": "2026-06-26", "consumption": 295, "unit": "kWh", "runtime": 24.0, "avgLoad": 76},
+        {"date": "2026-06-27", "consumption": 310, "unit": "kWh", "runtime": 24.0, "avgLoad": 78},
+        {"date": "2026-06-28", "consumption": 325, "unit": "kWh", "runtime": 24.0, "avgLoad": 82},
+        {"date": "2026-06-29", "consumption": 340, "unit": "kWh", "runtime": 24.0, "avgLoad": 85},
+        {"date": "2026-06-30", "consumption": 315, "unit": "kWh", "runtime": 24.0, "avgLoad": 80},
+        {"date": "2026-07-01", "consumption": 125, "unit": "kWh", "runtime": 10.0, "avgLoad": 75}
+      ],
+      "currentPower": 12.5,
+      "powerUnit": "kW",
+      "efficiency": {"fanEfficiency": "82%", "rated": "88%", "degradation": "6.8%"}
+    },
+    "Boiler-01": {
+      "dailyConsumption": [
+        {"date": "2026-06-25", "consumption": 450, "unit": "therms", "runtime": 8.0, "avgLoad": 45},
+        {"date": "2026-06-26", "consumption": 380, "unit": "therms", "runtime": 6.5, "avgLoad": 40},
+        {"date": "2026-06-27", "consumption": 420, "unit": "therms", "runtime": 7.2, "avgLoad": 42},
+        {"date": "2026-06-28", "consumption": 350, "unit": "therms", "runtime": 5.8, "avgLoad": 38},
+        {"date": "2026-06-29", "consumption": 310, "unit": "therms", "runtime": 5.0, "avgLoad": 35},
+        {"date": "2026-06-30", "consumption": 290, "unit": "therms", "runtime": 4.5, "avgLoad": 32},
+        {"date": "2026-07-01", "consumption": 120, "unit": "therms", "runtime": 2.0, "avgLoad": 30}
+      ],
+      "currentPower": 0,
+      "powerUnit": "kW",
+      "efficiency": {"thermalEfficiency": "93%", "rated": "95%", "degradation": "2.1%"}
+    }
+  },
+  "peakDemand": {
+    "current": 420,
+    "unit": "kW",
+    "timestamp": "2026-06-30T14:30:00Z",
+    "limit": 500,
+    "utilization": "84%"
+  },
+  "costRate": {
+    "onPeak": 0.15,
+    "offPeak": 0.08,
+    "demandCharge": 12.50,
+    "unit": "$/kWh"
+  }
+}

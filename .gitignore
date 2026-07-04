@@ -1,0 +1,105 @@
+# ============================================================
+# AgenticOS — .gitignore
+# ============================================================
+
+# ------ Environment & Secrets ------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ------ Python ------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+MANIFEST
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+nosetests.xml
+pytest.ini
+
+# mypy / type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# ------ Node / Frontend ------
+node_modules/
+dist/
+build/
+.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+
+# Vite build output
+frontend/dist/
+frontend/build/
+
+# ------ Vector DB / AI artifacts ------
+backend/chroma_db/
+*.chroma
+*.faiss
+*.pkl
+*.bin
+*.npy
+
+# ------ Logs ------
+*.log
+logs/
+*.log.*
+
+# ------ OS & Editor ------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ------ Docker ------
+.dockerenv
+
+# ------ Misc ------
+*.pdf
+*.zip
+*.tar.gz
