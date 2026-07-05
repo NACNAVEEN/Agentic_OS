@@ -99,6 +99,11 @@ pytest tests/ -v
 | [Setup Guide](docs/setup_guide.md) | Local development guide |
 | [Deployment Guide](docs/deployment.md) | Docker and production deployment |
 
+## video Walkthrough demo
+**Presentation link**: https://www.loom.com/share/844ab5693e0340dab21b95f19f9ea9c4
+**Demonstration link**: 
+https://www.loom.com/share/73a24c2e2bef4f2299926635e4ad79b8 
+
 ---
 
 ## 🏗️ Project Structure
